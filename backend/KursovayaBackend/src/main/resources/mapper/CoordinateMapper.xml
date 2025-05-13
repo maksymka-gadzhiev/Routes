@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace="com.example.kursovayabackend.mapper.CoordinateMapper">
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="coordinateId" keyColumn="coordinate_id">
+        INSERT INTO coordinate (x, y, elevation, order_number, route_id)
+        VALUES
+        <foreach collection="list" item="coord" separator=",">
+            (#{coord.xLon}, #{coord.yLat}, #{coord.elevation}, #{coord.orderNumber}, #{coord.routeId})
+        </foreach>
+    </insert>
+
+    <!-- CoordinateMapper.xml -->
+    <select id="findByRouteId">
+        SELECT
+            coordinate_id as coordinateId,
+            x as xLon,
+            y as yLat,
+            elevation,
+            order_number as orderNumber,
+            route_id as routeId
+        FROM coordinate
+        WHERE route_id = #{routeId}
+    </select>
+
+
+</mapper>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace="com.example.kursovayabackend.mapper.UserMapper">
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="userId">
+        INSERT INTO users (email, password)
+        VALUES (#{email}, #{password})
+    </insert>
+
+    <select id="findByEmail" resultType="com.example.kursovayabackend.entity.UserEntity">
+        SELECT
+        user_id as userId,  <!-- Явное преобразование имен столбцов -->
+        email,
+        password
+        FROM users
+        WHERE email = #{email}
+    </select>
+
+    <select id="findById" resultType="com.example.kursovayabackend.entity.UserEntity">
+        SELECT
+            user_id as userId,
+            email,
+            password
+        FROM users
+        WHERE user_id = #{userid}
+    </select>
+
+    <select id="findAll" resultType="com.example.kursovayabackend.entity.UserEntity">
+        SELECT * FROM users
+    </select>
+
+    <update id="update">
+        UPDATE users SET
+         login = #{login},
+         email = #{email},
+         password = #{password},
+         avatar = #{avatar},
+         avatar = #{avatar},
+         info = #{info}
+        WHERE userid = #{userid}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM users WHERE userid = #{userid}
+    </delete>
+
+    <select id="findByEmailContains" resultType="com.example.kursovayabackend.entity.UserEntity">
+        SELECT
+            user_id as userId,
+            email,
+            password
+        FROM users
+        WHERE LOWER(SUBSTRING(email, 1, POSITION('@' IN email) - 1)) = LOWER(#{login})
+            LIMIT 1
+    </select>
+</mapper>

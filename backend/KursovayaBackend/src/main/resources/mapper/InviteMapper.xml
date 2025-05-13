@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace="com.example.kursovayabackend.mapper.InviteRepository">
+    <insert id="save">
+        INSERT INTO Invite (userFromId, userToId, createAt)
+        VALUES (#{userFromId}, #{userToId}, #{createAt})
+    </insert>
+
+    <select id="findById">
+        SELECT * FROM Invite WHERE inviteId = #{id}
+    </select>
+
+    <select id="findByUserId">
+        SELECT * FROM Invite WHERE userToId = #{userId}
+    </select>
+
+    <delete id="deleteById">
+        DELETE FROM Invite WHERE inviteId = #{id}
+    </delete>
+    <select id="findByUserToId" resultType="Invite">
+        SELECT * FROM Invite
+        WHERE userToId = #{userId}
+    </select>
+    <!-- Другие методы по необходимости -->
+</mapper>

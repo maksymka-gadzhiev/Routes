@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace="com.example.kursovayabackend.mapper.RouteMapper">
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="routeId" keyColumn="route_id">
+        INSERT INTO route (
+        title,
+        description,
+        visibility,
+        status,
+        difficulty,
+        avg_rating,
+        user_id,
+        created_at,
+        updated_at
+        ) VALUES (
+        #{title},
+        #{description},
+        #{visibility},
+        #{status},
+        #{difficulty},
+        #{avgRating},
+        #{userId},
+        NOW(),
+        NOW()
+        )
+    </insert>
+
+    <select id="findById" resultType="com.example.kursovayabackend.entity.Route">
+        SELECT
+            route_id as routeId,
+            title,
+            description,
+            visibility,
+            status,
+            difficulty,
+            avg_rating as avgRating,
+            user_id as userId,
+            created_at as createdAt,
+            updated_at as updatedAt
+        FROM route
+        WHERE route_id = #{id}
+    </select>
+
+    <!-- RouteMapper.xml -->
+    <select id="findByUserId">
+        SELECT
+            route_id as routeId,
+            title,
+            description,
+            visibility,
+            status,
+            difficulty,
+            avg_rating as avgRating,
+            user_id as userId,
+            created_at as createdAt,
+            updated_at as updatedAt
+        FROM route
+        WHERE user_id = #{userId}
+    </select>
+
+
+    <!-- Другие методы по необходимости -->
+</mapper>

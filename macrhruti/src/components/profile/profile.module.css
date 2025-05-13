@@ -1,0 +1,327 @@
+.navbar {
+    background-color: #84AC7C;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+
+.navButton{
+    color: #363E45;
+    font-size: 1.1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.personalData {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.userName {
+    color: #363E45;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+.userId {
+    color: #83939D;
+    margin-top: 0;
+}
+
+.avatarStatic {
+    display: flex;
+    flex-direction: row;
+    background-image: url("../../assets/fon.png");
+    margin-top: 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: auto;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.6); /* Белый цвет с прозрачностью 50% */
+    background-blend-mode: overlay; /* Режим смешивания */
+    border: 1px solid #363E45;
+    padding: 35px;
+}
+
+.avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.avatarPhoto {
+    width: 300px; /* Размер аватарки */
+    height: 300px; /* Размер аватарки */
+    border-radius: 50%; /* Делаем круглым */
+    background-color: #ccc; /* Церый фон, если фото отсутствует */
+    background-image: url("../../assets/photo.jpg"); /* Путь к фото */
+    background-size: cover; /* Растягиваем фото на весь блок */
+    background-position: center; /* Центрируем фото */
+    
+}
+
+.status {
+    font-size: 18px;
+    color: #84AC7C;
+    
+}
+
+.static {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.staticName {
+    background-color: #83939D;
+    display: flex; /* Включаем flexbox */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 10px; /* Добавьте отступы, если нужно */
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 0;
+    font-size: 35px;
+}
+
+.staticText {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #d9d9d9;
+    border-radius: 0 0 20px 20px;
+}
+
+.staticInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Два столбца */
+    gap: 10px;
+    color: #363E45;
+    font-size: large;
+}
+
+/* Стили для блока друзей */
+.friends {
+    margin-top: 20px; /* Отступ сверху */
+    padding: 40px;
+}
+
+.nameFriends {
+    font-size: 30px; /* Размер текста */
+    display: flex; /* Включаем flexbox */
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 10px; /* Добавьте отступы, если нужно */
+    font-style: border;
+    background-color: #363E45;
+    border-radius: 50px;
+    color: #83939D;
+    cursor: pointer;
+}
+
+.friendsList {
+    display: flex; /* Располагаем аватарки в строку */
+    gap: 40px; /* Расстояние между аватарками */
+    flex-wrap: wrap; /* Перенос на новую строку, если не хватает места */
+}
+
+.friendAvatar {
+    width: 80px; /* Размер аватарки */
+    height: 80px; /* Размер аватарки */
+    border-radius: 50%; /* Делаем круглую аватарку */
+    overflow: hidden; /* Обрезаем изображение, чтобы оно было круглым */
+    border: #363E45 solid 1px;
+}
+
+.friendImage {
+    width: 100%; /* Заполняем контейнер */
+    height: 100%; /* Заполняем контейнер */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+}
+
+.newFriend {
+    width: 40px; /* Размер аватарки */
+    height: 40px;
+    margin-top: 50px;
+    padding: 20px;
+    color: #363E45;
+    background: none;
+    border: none;
+    font-size: 50px;
+    text-align: center;
+    font: solid;
+    cursor: pointer;
+}
+
+.friendsButton {
+    border: #363E45 solid 1px;
+    padding: 35px;
+    border-radius: 30px;
+    background: #83939D;
+}
+
+.routes {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #363E45;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.routesTitle {
+    font-size: 44px;
+    color: #83939D;
+    margin-bottom: 10px;
+}
+
+.routesControls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.select {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #83939D;
+}
+
+.select:hover {
+    background-color: #84AC7C;
+}
+.routesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 30px;
+}
+
+.customDropdown {
+    color: #363E45;
+    position: relative;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    margin-bottom: 10px; /* Отступ между меню */
+  }
+  
+  .dropdownHeader {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+  }
+  
+  .dropdownList {
+    display: none; /* Скрываем список по умолчанию */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    z-index: 1000;
+  }
+  
+  .customDropdown:hover .dropdownList {
+    display: block; /* Показываем список при наведении */
+  }
+  
+  .dropdownItem {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Плавное изменение стилей */
+  }
+  
+  .dropdownItem:hover {
+    background-color: #84AC7C; /* Цвет фона при наведении */
+    color: #363E45; /* Цвет текста при наведении */
+  }
+
+  .friends {
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.friendsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.manageLink {
+    text-decoration: none;
+}
+
+.manageFriendsButton {
+    padding: 8px 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.manageFriendsButton:hover {
+    background: #45a049;
+}
+
+.friendsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.friendItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.friendAvatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.friendImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.friendName {
+    margin-top: 8px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #333;
+}
+
+.noFriends {
+    color: #666;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}

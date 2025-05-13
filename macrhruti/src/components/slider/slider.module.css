@@ -1,0 +1,74 @@
+.sliderBody {
+    width: 90%;
+    background-color: #363E45;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    border-radius: 30px;
+    align-items: center;
+}
+
+h1 {
+    color: #363E45;
+}
+
+
+.buttomNavigation {
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Выравниваем по горизонтали по центру */
+    align-items: center; /* Выравниваем по вертикали по центру */
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+.slide {
+    width: 700px;
+    height: 450px;
+    margin: 30px;
+    margin-bottom: 0%;
+    
+    border-radius: 30px;
+}
+
+.buttomArrow {
+    background: none;
+    color: #83939D;
+    border: none;
+    padding: 5px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Выравниваем по горизонтали по центру */
+    align-items: center;
+
+}
+
+.indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.indicator.active {
+    background-color: #83939D;
+}
+  
+.indicator:hover {
+    background-color: #D9D9D9;
+}
+
+.slidesText {
+    color: #83939D;
+    font-size: 24px;
+}
