@@ -1,0 +1,221 @@
+.mapContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #363E45;
+}
+
+.leftPanel {
+  width: 300px;
+  padding: 15px;
+  background-color: #2D343A;
+  border-right: 2px solid #454F57;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.panelTitle {
+  color: #D9D9D9;
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #454F57;
+  text-align: center;
+}
+
+.markersList {
+  flex: 1;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.markerItem {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: #454F57;
+  border: 1px solid #565F68;
+  color: #D9D9D9;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+  width: 90%;
+  max-width: 260px;
+  left: 20px;
+}
+
+.markerItem:hover {
+  background: #565F68;
+}
+
+.markerItem span {
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: #D9D9D9;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 5px;
+  flex-shrink: 0;
+}
+
+.removeButton:hover {
+  color: #E74C3C;
+}
+
+.routeButtons {
+  padding-top: 15px;
+  border-top: 1px solid #454F57;
+}
+
+.routeTypes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.choiceButton {
+  padding: 8px 12px;
+  background: #454F57;
+  border: 1px solid #565F68;
+  color: #D9D9D9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.choiceButton:hover {
+  background: #565F68;
+}
+
+.choiceButton.active {
+  background: #84AC7C;
+  border-color: #84AC7C;
+  color: #2D343A;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #363E45;
+}
+
+.map {
+  flex: 1;
+  width: calc(100% - 30px);
+  margin: 15px;
+  border: 5px solid #2D343A;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.controlsPanel {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #2D343A;
+  border-top: 2px solid #454F57;
+}
+
+.controlButton {
+  padding: 10px 20px;
+  background: #454F57;
+  border: 1px solid #565F68;
+  color: #D9D9D9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+.controlButton:hover {
+  background: #565F68;
+}
+
+.saveButton {
+  padding: 10px 20px;
+  background: #84AC7C;
+  border: 1px solid #84AC7C;
+  color: #2D343A;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+  min-width: 120px;
+}
+
+.saveButton:hover {
+  background: #6d8f66;
+}
+
+.saveButton:disabled {
+  background: #565F68;
+  border-color: #565F68;
+  color: #83939D;
+  cursor: not-allowed;
+}
+
+.ghost {
+  opacity: 0.5;
+  background: #84AC7C;
+}
+
+.chosen {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.drag {
+  background: #84AC7C;
+}
+
+/* Добавьте в существующие стили */
+.controlButton {
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controlButton:hover {
+  background-color: #e0e0e0;
+}
+
+.saveButton {
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.saveButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

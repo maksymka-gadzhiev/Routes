@@ -1,0 +1,90 @@
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    background-color: #363E45;
+}
+
+.box:hover {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #363E45;
+    box-shadow: 1px 1px 15px 1px black;
+    transition: 0.45s;
+}
+
+.box h1 {
+    color: #D9D9D9;
+    text-transform: uppercase;
+    font-weight: 500px;
+}
+
+.but {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #83939D;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #D9D9D9;
+    border-radius: 24px;
+    transition: 0.5s;
+}
+
+.but:focus {
+    width: 260px;
+    border-color: #84AC7C;
+}
+
+.button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #84AC7C;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: #D9D9D9;
+    border-radius: 24px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #84AC7C;
+}
+
+.buttonRegistration {
+    border: 0;
+    font-size: 15px;
+    background: none;
+    color: #84AC7C;
+    cursor: pointer;
+}
+
+.registration{
+    position: absolute;
+    left: 40%;
+    top: 90%;
+    border: 0;
+    font-size: 15px;
+    background: none;
+    color: #84AC7C;
+    cursor: pointer;
+}

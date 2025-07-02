@@ -1,0 +1,225 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #363E45;
+    min-height: 100vh;
+    color: #D9D9D9;
+}
+
+.backButton {
+    background: none;
+    border: 2px solid #84AC7C;
+    color: #D9D9D9;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.backButton:hover {
+    background-color: #84AC7C20;
+    transform: translateX(-5px);
+}
+
+.section {
+    background: #2a3036;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #3f4850;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.inviteForm input {
+    background: #363E45;
+    border: 2px solid #3f4850;
+    color: #D9D9D9;
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    width: 300px;
+    transition: all 0.3s;
+}
+
+.inviteForm input:focus {
+    border-color: #84AC7C;
+    outline: none;
+    box-shadow: 0 0 0 3px #84AC7C40;
+}
+
+.sendButton {
+    background-color: #84AC7C;
+    color: #363E45;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+.sendButton:disabled {
+    background-color: #5c7560;
+    color: #83939D;
+}
+
+.sendButton:hover:not(:disabled) {
+    background-color: #72996b;
+    transform: translateY(-2px);
+}
+
+.inviteCard {
+    background: #363E45;
+    border: 1px solid #3f4850;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.inviteCard:hover {
+    transform: translateX(5px);
+}
+
+.inviteFrom {
+    color: #D9D9D9;
+    font-weight: 500;
+}
+
+.inviteDate {
+    color: #83939D;
+    font-size: 0.9em;
+}
+
+.acceptButton {
+    background-color: #84AC7C;
+    color: #363E45;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    margin-left: 1rem;
+    transition: all 0.3s;
+}
+
+.acceptButton:hover {
+    background-color: #72996b;
+    box-shadow: 0 2px 6px rgba(132, 172, 124, 0.3);
+}
+
+.declineButton {
+    background-color: #3f4850;
+    color: #83939D;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.declineButton:hover {
+    background-color: #4a555e;
+    color: #D9D9D9;
+}
+
+.friendCard {
+    background: #363E45;
+    border: 1px solid #3f4850;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s;
+}
+
+.friendCard:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.avatarPlaceholder {
+    background-color: #84AC7C;
+    color: #363E45;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.friendId {
+    color: #D9D9D9;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.friendsSince {
+    color: #83939D;
+    font-size: 0.9em;
+}
+
+.emptyMessage {
+    color: #83939D;
+    text-align: center;
+    padding: 2rem;
+    opacity: 0.8;
+}
+
+.errorBanner {
+    background-color: #3f1a1a;
+    color: #ff6b6b;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #5c2a2a;
+}
+
+.loading {
+    color: #84AC7C;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.invitesContainer, .friendsGrid {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.inviteForm {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.inviteActions {
+    display: flex;
+    gap: 0.8rem;
+}
+.friendEmail {
+    font-weight: 500;
+    color: #D9D9D9;
+    margin-bottom: 0.3rem;
+  }
+
+  .friendCard {
+    transition: all 0.2s ease-in-out;
+}
+
+.friendCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+}
